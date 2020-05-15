@@ -1,0 +1,82 @@
+{
+    "@context": "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
+    "@id": "https://3d.hypotheticalhorse.com/data.json",
+    "@type": "dcat:Catalog",
+    "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+    "describedBy": "https://project-open-data.cio.gov/v1.1/schema/catalog.json",
+    "dataset": [
+        {
+            "@type": "dcat:Dataset",
+            "identifier": "https://ids.hypotheticalhorse.com/229d002e-85f0-11ea-9cb2-6f17b98b91f2",
+            "title": "New York - Manhattan - 3D Buildings",
+            "description": "3D Buildings in Manhattan, New York.",
+            "accessLevel": "public",
+            "contactPoint": {
+                "@type": "vcard:Contact",
+                "fn": "Kevin Ring",
+                "hasEmail": "mailto:kevin@cesium.com"
+            },
+            "publisher": {
+                "@type": "org:Organization",
+                "name": "Cesium GS, Inc."
+            },
+            "keyword": [
+                "3d",
+                "buildings"
+            ],
+            "modified": "2019-12-03",
+            "spatial": "-74.01900887327089,40.700475291581974,-73.9068954348699,40.880256294183646",
+            "distribution": [
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "3D Tiles",
+                    "accessURL": "https://3d.hypotheticalhorse.com/collections/NewYorkBuildings/3dtiles/",
+                    "format": "3D Tiles",
+                    "mediaType": "application/vnd.3dtiles+json"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "identifier": "https://ids.hypotheticalhorse.com/49646d76-85f2-11ea-a103-0f16f8aed679",
+            "title": "Waratah Station BIM",
+            "description": "A 3D model of Waratah Station in New South Wales, Australia.",
+            "accessLevel": "public",
+            "landingPage": "https://portal.spatial.nsw.gov.au/portal/home/item.html?id=38dbaa728180462a8c70ad265864b204",
+            "contactPoint": {
+                "@type": "vcard:Contact",
+                "fn": "Kevin Ring",
+                "hasEmail": "mailto:kevin@cesium.com"
+            },
+            "publisher": {
+                "@type": "org:Organization",
+                "name": "Cesium GS, Inc."
+            },
+            "keyword": [
+                "3d",
+                "bim",
+                "transport",
+                "train",
+                "station"
+            ],
+            "modified": "2019-12-16",
+            "spatial": "151.73,-32.9034,151.7324,-32.9011",
+            "distribution": [
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "3D Tiles",
+                    "accessURL": "https://nsw.digitaltwin.terria.io/i3s-to-3dtiles/https://portal.spatial.nsw.gov.au/i3s/rest/services/Hosted/ESP/WaratahStation/SceneServer",
+                    "format": "3D Tiles",
+                    "mediaType": "application/vnd.3dtiles+json"
+                },
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "i3s",
+                    "accessURL": "https://portal.spatial.nsw.gov.au/i3s/rest/services/Hosted/ESP/WaratahStation/SceneServer",
+                    "format": "i3s",
+                    "mediaType": "application/vnd.i3s+json"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "NewYorkBuildings",
+  "title": "New York - Manhattan - 3D Buildings",
+  "description": "3D Buildings in Manhattan, New York.",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -74.01900887327089,
+          40.700475291581974,
+          -73.9068954348699,
+          40.880256294183646
+        ]
+      ],
+      "crs": "http://www.opengis.net/def/crs/OGC/0/CRS84h"
+    }
+  },
+  "links": [
+    {
+      "title": "this document",
+      "href": "https://3d.hypotheticalhorse.com/collections/NewYorkBuildings/",
+      "rel": "self",
+      "type": "application/json"
+    },
+    {
+      "title": "Collections",
+      "href": "https://3d.hypotheticalhorse.com/collections/",
+      "rel": "collection",
+      "type": "application/json"
+    },
+    {
+      "title": "3D Tiles",
+      "href": "https://3d.hypotheticalhorse.com/collections/NewYorkBuildings/3dtiles/",
+      "rel": "item",
+      "type": "application/json+3dtiles"
+    }
+  ]
+}

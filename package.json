@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "packages/terriajs"
+    "packages/terriajs",
+    "packages/terriajs-server"
   ],
   "name": "ogc3d",
   "version": "0.0.1",

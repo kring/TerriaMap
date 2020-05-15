@@ -1,0 +1,21 @@
+{
+    "title": "Pilot 3D Container API",
+    "description": "A pilot of an API for 3D containers and tiles.",
+    "links": [
+        {
+            "title": "Service Description",
+            "href": "https://app.swaggerhub.com/apis/timothy-miller/3D-Data-Container/0.0.1",
+            "rel": "service-desc"
+        },
+        {
+            "title": "Conformance",
+            "href": "https://3d.hypotheticalhorse.com/conformance/",
+            "rel": "conformance"
+        },
+        {
+            "title": "Collections",
+            "href": "https://3d.hypotheticalhorse.com/collections/",
+            "rel": "data"
+        }
+    ]
+}

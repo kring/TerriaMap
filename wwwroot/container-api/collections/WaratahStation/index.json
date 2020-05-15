@@ -1,0 +1,44 @@
+{
+  "id": "WaratahStation",
+  "title": "Waratah Station BIM",
+  "description": "A model of Waratah Station in New South Wales, Australia.",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          151.73,
+          -32.9034,
+          151.7324,
+          -32.9011
+        ]
+      ],
+      "crs": "http://www.opengis.net/def/crs/OGC/0/CRS84h"
+    }
+  },
+  "links": [
+    {
+      "title": "this document",
+      "href": "https://3d.hypotheticalhorse.com/collections/WaratahStation/",
+      "rel": "self",
+      "type": "application/json"
+    },
+    {
+      "title": "Collections",
+      "href": "https://3d.hypotheticalhorse.com/collections/",
+      "rel": "collection",
+      "type": "application/json"
+    },
+    {
+      "title": "3D Tiles",
+      "href": "https://nsw.digitaltwin.terria.io/i3s-to-3dtiles/https://portal.spatial.nsw.gov.au/i3s/rest/services/Hosted/ESP/WaratahStation/SceneServer",
+      "rel": "item",
+      "type": "application/json+3dtiles"
+    },
+    {
+      "title": "i3s",
+      "href": "https://portal.spatial.nsw.gov.au/i3s/rest/services/Hosted/ESP/WaratahStation/SceneServer",
+      "rel": "item",
+      "type": "application/json+i3s"
+    }
+  ]
+}
