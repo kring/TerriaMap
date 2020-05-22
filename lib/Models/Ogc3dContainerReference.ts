@@ -41,7 +41,7 @@ export default class Ogc3dContainerReference extends UrlMixin(
   }
 
   protected forceLoadReference(
-    previousTarget: BaseModel
+    previousTarget: BaseModel | undefined
   ): Promise<BaseModel | undefined> {
     if (this.uri === undefined) {
       return Promise.resolve(undefined);
@@ -53,7 +53,7 @@ export default class Ogc3dContainerReference extends UrlMixin(
 
     const proxiedUrl = proxyCatalogItemUrl(this, this.uri.toString(), "0d");
     return loadJson(proxiedUrl).then(json => {
-      if (json.collections !== undefined) {
+      if (json.collections !== undefined || json.children !== undefined) {
         return Ogc3dContainerReference.loadFromCollections(
           this.terria,
           this,
@@ -86,7 +86,7 @@ export default class Ogc3dContainerReference extends UrlMixin(
     id: string | undefined,
     name: string | undefined,
     json: any,
-    previousTarget: BaseModel,
+    previousTarget: BaseModel | undefined,
     override: JsonObject | undefined,
     proxiedLandingPageUrl: string
   ): Promise<BaseModel | undefined> {
@@ -130,7 +130,7 @@ export default class Ogc3dContainerReference extends UrlMixin(
     id: string | undefined,
     name: string | undefined,
     json: any,
-    previousTarget: BaseModel,
+    previousTarget: BaseModel | undefined,
     override: JsonObject | undefined,
     proxiedCollectionsUrl: string
   ): Promise<BaseModel | undefined> {
@@ -152,7 +152,7 @@ export default class Ogc3dContainerReference extends UrlMixin(
     id: string | undefined,
     name: string | undefined,
     json: any,
-    previousTarget: BaseModel,
+    previousTarget: BaseModel | undefined,
     override: JsonObject | undefined,
     proxiedCollectionsUrl: string
   ): Promise<BaseModel> {
@@ -165,12 +165,47 @@ export default class Ogc3dContainerReference extends UrlMixin(
 
     group.setTrait(CommonStrata.definition, "name", name);
 
-    const collections = json.collections;
+    const collections = json.collections || json.children;
 
     const ids = filterOutUndefined(
       collections.map((collection: any) => {
         const collectionId = id + "/" + collection.id;
+
+        let collectionGroup: CatalogGroup | undefined;
+
         const links = collection.links || [];
+
+        const children = collection.children || [];
+        if (children.length > 0) {
+          const selfLink = links.filter(link => link.rel === "self")[0];
+          if (selfLink) {
+            const resolvedUri = URI(selfLink.href).absoluteTo(
+              proxiedCollectionsUrl
+            );
+            const proxiedUrl = proxyCatalogItemUrl(
+              sourceReference,
+              resolvedUri.toString(),
+              "0d"
+            );
+
+            const nestedGroup = new Ogc3dContainerReference(
+              collectionId,
+              terria
+            );
+            nestedGroup.setTrait(
+              CommonStrata.definition,
+              "name",
+              collection.title
+            );
+            nestedGroup.setTrait(CommonStrata.definition, "url", proxiedUrl);
+            nestedGroup.setTrait(CommonStrata.definition, "isGroup", true);
+
+            terria.addModel(nestedGroup);
+
+            return nestedGroup.uniqueId;
+          }
+        }
+
         const content = collection.content || [];
         const allItems = links.concat(content);
 
