@@ -170,12 +170,15 @@ export default class Ogc3dContainerReference extends UrlMixin(
     const ids = filterOutUndefined(
       collections.map((collection: any) => {
         const collectionId = id + "/" + collection.id;
-        const links = collection.links;
-        if (links === undefined) {
+        const links = collection.links || [];
+        const content = collection.content || [];
+        const allItems = links.concat(content);
+
+        if (allItems.length === 0) {
           return undefined;
         }
 
-        const compatibleLinks = links.filter(
+        const compatibleLinks = allItems.filter(
           (link: any) => link.type === "application/json+3dtiles"
         );
         if (compatibleLinks.length === 0) {
