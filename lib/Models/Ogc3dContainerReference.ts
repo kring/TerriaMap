@@ -177,7 +177,7 @@ export default class Ogc3dContainerReference extends UrlMixin(
 
         const children = collection.children || [];
         if (children.length > 0) {
-          const selfLink = links.filter(link => link.rel === "self")[0];
+          const selfLink = links.filter((link: any) => link.rel === "self")[0];
           if (selfLink) {
             const resolvedUri = URI(selfLink.href).absoluteTo(
               proxiedCollectionsUrl
