@@ -29,6 +29,7 @@ import createGlobalBaseMapOptions from 'terriajs/lib/ViewModels/createGlobalBase
 import registerCatalogMembers from 'terriajs/lib/Models/registerCatalogMembers';
 import defined from 'terriajs-cesium/Source/Core/defined';
 import Ogc3dContainer from './lib/Models/Ogc3dContainerReference';
+import UnsupportedCatalogItem from './lib/Models/UnsupportedCatalogItem';
 import CatalogMemberFactory from 'terriajs/lib/Models/CatalogMemberFactory';
 
 // Register all types of catalog members in the core TerriaJS.  If you only want to register a subset of them
@@ -58,6 +59,7 @@ const viewState = new ViewState({
 
 registerCatalogMembers();
 CatalogMemberFactory.register(Ogc3dContainer.type, Ogc3dContainer);
+CatalogMemberFactory.register(UnsupportedCatalogItem.type, UnsupportedCatalogItem);
 
 if (process.env.NODE_ENV === "development") {
     window.viewState = viewState;

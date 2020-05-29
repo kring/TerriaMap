@@ -1,94 +1,292 @@
 {
-  "homeCamera": {
-    "north": -8,
-    "east": 158,
-    "south": -45,
-    "west": 109
-  },
   "catalog": [
     {
       "name": "Cesium (Hypothetical Horse)",
-      "type": "ogc3d",
-      "url": "https://3d.hypotheticalhorse.com",
-      "isGroup": true,
-      "override": {
-        "info": [
-          {
-            "name": "OGC 3D Container and Tiles API URL",
-            "content": "https://3d.hypotheticalhorse.com"
+      "type": "group",
+      "members": [
+        {
+          "name": "All",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "https://3d.hypotheticalhorse.com",
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "https://3d.hypotheticalhorse.com"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "name": "Inside New York bounding box",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "https://3d.hypotheticalhorse.com",
+          "bbox": {
+            "west": -74.021,
+            "south": 40.701,
+            "east": -73.99,
+            "north": 40.775
+          },
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function. Collections and children in this group will be filtered to New York using `?bbox=-74.021,40.701,-73.990,40.775`. This group also tests the `CollectionsBboxQuery` and `3dContainerBboxQuery` TIE functions."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "https://3d.hypotheticalhorse.com"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Helyx",
-      "type": "ogc3d",
-      "url": "http://helyxapache2.eastus.azurecontainer.io/",
-      "isGroup": true,
-      "override": {
-        "info": [
-          {
-            "name": "OGC 3D Container and Tiles API URL",
-            "content": "http://helyxapache2.eastus.azurecontainer.io/"
+      "type": "group",
+      "members": [
+        {
+          "name": "All",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "http://helyxapache2.eastus.azurecontainer.io/",
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "http://helyxapache2.eastus.azurecontainer.io/"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "name": "Inside New York bounding box",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "http://helyxapache2.eastus.azurecontainer.io/",
+          "bbox": {
+            "west": -74.021,
+            "south": 40.701,
+            "east": -73.99,
+            "north": 40.775
+          },
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function. Collections and children in this group will be filtered to New York using `?bbox=-74.021,40.701,-73.990,40.775`. This group also tests the `CollectionsBboxQuery` and `3dContainerBboxQuery` TIE functions."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "http://helyxapache2.eastus.azurecontainer.io/"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Steinbeis",
-      "type": "ogc3d",
-      "url": "http://steinbeis-3dps.eu:8080/3DContainerTile/collections",
-      "isGroup": true,
-      "override": {
-        "info": [
-          {
-            "name": "OGC 3D Container and Tiles API URL",
-            "content": "http://steinbeis-3dps.eu:8080/3DContainerTile/collections"
+      "type": "group",
+      "members": [
+        {
+          "name": "All",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "http://steinbeis-3dps.eu:8080/3DContainerTile/",
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "http://steinbeis-3dps.eu:8080/3DContainerTile/"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "name": "Inside New York bounding box",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "http://steinbeis-3dps.eu:8080/3DContainerTile/",
+          "bbox": {
+            "west": -74.021,
+            "south": 40.701,
+            "east": -73.99,
+            "north": 40.775
+          },
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function. Collections and children in this group will be filtered to New York using `?bbox=-74.021,40.701,-73.990,40.775`. This group also tests the `CollectionsBboxQuery` and `3dContainerBboxQuery` TIE functions."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "http://steinbeis-3dps.eu:8080/3DContainerTile/"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Skymantics",
-      "type": "ogc3d",
-      "url": "http://13.82.99.186:5050/",
-      "isGroup": true,
-      "override": {
-        "info": [
-          {
-            "name": "OGC 3D Container and Tiles API URL",
-            "content": "http://13.82.99.186:5050/"
+      "type": "group",
+      "members": [
+        {
+          "name": "All",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "http://13.82.99.186:5050/",
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "http://13.82.99.186:5050/"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "name": "Inside New York bounding box",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "http://13.82.99.186:5050/",
+          "bbox": {
+            "west": -74.021,
+            "south": 40.701,
+            "east": -73.99,
+            "north": 40.775
+          },
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function. Collections and children in this group will be filtered to New York using `?bbox=-74.021,40.701,-73.990,40.775`. This group also tests the `CollectionsBboxQuery` and `3dContainerBboxQuery` TIE functions."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "http://13.82.99.186:5050/"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Cognitics",
-      "type": "ogc3d",
-      "url": "http://cdb.cognitics.net:3000/",
-      "isGroup": true,
-      "override": {
-        "info": [
-          {
-            "name": "OGC 3D Container and Tiles API URL",
-            "content": "http://cdb.cognitics.net:3000/"
+      "type": "group",
+      "members": [
+        {
+          "name": "All",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "http://cdb.cognitics.net:3000/",
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "http://cdb.cognitics.net:3000/"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "name": "Inside New York bounding box",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "http://cdb.cognitics.net:3000/",
+          "bbox": {
+            "west": -74.021,
+            "south": 40.701,
+            "east": -73.99,
+            "north": 40.775
+          },
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function. Collections and children in this group will be filtered to New York using `?bbox=-74.021,40.701,-73.990,40.775`. This group also tests the `CollectionsBboxQuery` and `3dContainerBboxQuery` TIE functions."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "http://cdb.cognitics.net:3000/"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Ecere",
-      "type": "ogc3d",
-      "url": "https://maps.ecere.com/geoapi/?f=json",
-      "isGroup": true,
-      "override": {
-        "info": [
-          {
-            "name": "OGC 3D Container and Tiles API URL",
-            "content": "https://maps.ecere.com/geoapi/?f=json"
+      "type": "group",
+      "members": [
+        {
+          "name": "All",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "https://maps.ecere.com/3DAPI/",
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "https://maps.ecere.com/3DAPI/"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "name": "Inside New York bounding box",
+          "type": "ogc3d",
+          "isGroup": true,
+          "url": "https://maps.ecere.com/3DAPI/",
+          "bbox": {
+            "west": -74.021,
+            "south": 40.701,
+            "east": -73.99,
+            "north": 40.775
+          },
+          "override": {
+            "info": [
+              {
+                "name": "OGC 3D Container and Tiles API",
+                "content": "This is the landing page. Opening this group tests the `LandingPage` TIE function. Collections and children in this group will be filtered to New York using `?bbox=-74.021,40.701,-73.990,40.775`. This group also tests the `CollectionsBboxQuery` and `3dContainerBboxQuery` TIE functions."
+              },
+              {
+                "name": "OGC 3D Container and Tiles API URL",
+                "content": "https://maps.ecere.com/3DAPI/"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
