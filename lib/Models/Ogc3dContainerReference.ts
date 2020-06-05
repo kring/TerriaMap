@@ -185,8 +185,11 @@ export default class Ogc3dContainerReference extends UrlMixin(
                         name: "Relationship",
                         content: item.rel
                       }
-                    ]
+                    ],
+                    colorBlendMode: "HIGHLIGHT"
                   };
+
+                  result.rectangle = getRectangle(json.extent);
 
                   if (
                     item.type === "application/3dtiles+json" ||
@@ -254,8 +257,11 @@ export default class Ogc3dContainerReference extends UrlMixin(
                         content:
                           "This is a distribution discovered in the `links` property of a 3D container."
                       }
-                    ]
+                    ],
+                    colorBlendMode: "HIGHLIGHT"
                   };
+
+                  result.rectangle = getRectangle(json.extent);
 
                   if (
                     item.type === "application/3dtiles+json" ||
@@ -583,4 +589,27 @@ export default class Ogc3dContainerReference extends UrlMixin(
 
     return Promise.resolve(group);
   }
+}
+
+function getRectangle(extent: any) {
+  if (extent && extent.spatial && extent.spatial.bbox && extent.spatial.bbox[0]) {
+    const bbox = extent.spatial.bbox[0];
+    if (bbox.length === 4) {
+      return {
+        west: bbox[0],
+        south: bbox[1],
+        east: bbox[2],
+        north: bbox[3]
+      };
+    } else if (bbox.length === 6) {
+      return {
+        west: bbox[0],
+        south: bbox[1],
+        east: bbox[3],
+        north: bbox[4]
+      };
+    }
+  }
+
+  return undefined;
 }
