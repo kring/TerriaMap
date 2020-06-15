@@ -93,29 +93,41 @@ module.exports = function(devMode, hot) {
                         {
                             loader: 'css-loader',
                             options: {
-                                sourceMap: true,
+                                // sourceMap: true,
                                 modules: true,
                                 camelCase: true,
                                 localIdentName: 'tm-[name]__[local]',
                                 importLoaders: 2
                             }
                         },
-                        'resolve-url-loader?sourceMap',
-                        'sass-loader?sourceMap'
+                        {
+                            loader: "resolve-url-loader",
+                            options: {
+                                // sourceMap: true,
+                                removeCR: true
+                            }
+                        },
+                        'sass-loader'
                     ] : [
                         MiniCssExtractPlugin.loader,
                         {
                             loader: 'css-loader',
                             options: {
-                                sourceMap: true,
+                                // sourceMap: true,
                                 modules: true,
                                 camelCase: true,
                                 localIdentName: 'tm-[name]__[local]',
                                 importLoaders: 2
                             }
                         },
-                        'resolve-url-loader?sourceMap',
-                        'sass-loader?sourceMap'
+                        {
+                            loader: "resolve-url-loader",
+                            options: {
+                                //sourceMap: true,
+                                removeCR: true
+                            }
+                        },
+                        'sass-loader'
                     ]
                 }
             ]

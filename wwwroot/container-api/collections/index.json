@@ -9,20 +9,20 @@
   ],
   "collections": [
     {
-      "id": "NewYorkBuildings",
-      "title": "New York - Manhattan - 3D Buildings",
-      "description": "3D Buildings in Manhattan, New York.",
+      "id": "Buildings",
+      "title": "Buildings",
+      "description": "3D Buildings",
       "collectionType": "3d-container",
       "extent": {
         "spatial": {
           "bbox": [
             [
-              -74.01900887327089,
-              40.700475291581974,
+              -180,
+              -90,
               0.0,
-              -73.9068954348699,
-              40.880256294183646,
-              547.6909683533274
+              180,
+              90,
+              1000.0
             ]
           ],
           "crs": "http://www.opengis.net/def/crs/OGC/0/CRS84h"
@@ -30,21 +30,130 @@
       },
       "links": [
         {
-          "title": "New York - Manhattan - 3D Buildings",
-          "href": "https://3d.hypotheticalhorse.com/collections/NewYorkBuildings/",
+          "title": "3D Buildings",
+          "href": "https://3d.hypotheticalhorse.com/collections/Buildings/",
           "rel": "self",
           "type": "application/json"
         }
       ],
       "content": [
-        {
-          "title": "3D Tiles",
-          "href": "https://3d.hypotheticalhorse.com/collections/NewYorkBuildings/3dtiles/",
-          "rel": "original",
-          "type": "application/json+3dtiles"
-        }
       ],
-      "children": []
+      "children": [
+        {
+          "id": "CesiumOSMBuildings",
+          "title": "Cesium OSM Buildings",
+          "description": "Worldwide buildings derived from OpenStreetMap.",
+          "collectionType": "3d-container",
+          "extent": {
+            "spatial": {
+              "bbox": [
+                [
+                  -180,
+                  -90,
+                  -385.1,
+                  180,
+                  90,
+                  5968
+                ]
+              ],
+              "crs": "http://www.opengis.net/def/crs/OGC/0/CRS84h"
+            }
+          },
+          "links": [
+            {
+              "title": "Cesium OSM Buildings",
+              "href": "https://3d.hypotheticalhorse.com/collections/Buildings/CesiumOSMBuildings/",
+              "rel": "self",
+              "type": "application/json"
+            }
+          ],
+          "content": [
+            {
+              "title": "3D Tiles",
+              "href": "https://map.hypotheticalhorse.com/ion/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkODhiMzU5YS0wYzI3LTRlNDItOTlkMC1jZmM1NGMyOThiZjkiLCJpZCI6MjU5LCJzY29wZXMiOlsiYXNyIiwiZ2MiXSwiaWF0IjoxNTkxMDQ3MTIzfQ.tdCE-sqNw6_6LY-j2jk035vpzEmVuAY3ajtBBpLDxuM/96188",
+              "rel": "original",
+              "type": "application/json+3dtiles"
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "NewYorkBuildings",
+          "title": "New York - Manhattan - 3D Buildings",
+          "description": "3D Buildings in Manhattan, New York.",
+          "collectionType": "3d-container",
+          "extent": {
+            "spatial": {
+              "bbox": [
+                [
+                  -74.01900887327089,
+                  40.700475291581974,
+                  0.0,
+                  -73.9068954348699,
+                  40.880256294183646,
+                  547.6909683533274
+                ]
+              ],
+              "crs": "http://www.opengis.net/def/crs/OGC/0/CRS84h"
+            }
+          },
+          "links": [
+            {
+              "title": "New York - Manhattan - 3D Buildings",
+              "href": "https://3d.hypotheticalhorse.com/collections/Buildings/NewYorkBuildings/",
+              "rel": "self",
+              "type": "application/json"
+            }
+          ],
+          "content": [
+            {
+              "title": "3D Tiles",
+              "href": "https://3d.hypotheticalhorse.com/collections/NewYorkBuildings/3dtiles/",
+              "rel": "original",
+              "type": "application/json+3dtiles"
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "WesternSydneyBuildings",
+          "title": "Western Sydney City Deal - 3D Buildings",
+          "description": "The Buildings 3D dataset is based on the PSMA Geoscape product, which is a suite of spatial and aspatial datasets which represent Australia’s built environment: buildings, surface cover and trees, derived from remotely sensed imagery. To access the raw data, users should make enquiries to the NSW Spatial Services ss-sds@customerservice.nsw.gov.au or to the PSMA info@geoscape.com.au.",
+          "collectionType": "3d-container",
+          "extent": {
+            "spatial": {
+              "bbox": [
+                [
+                  150.0736050749924,
+                  -34.34245865934369,
+                  -100,
+                  151.1149898323432,
+                  -32.98725153925325,
+                  1000
+                ]
+              ],
+              "crs": "http://www.opengis.net/def/crs/OGC/0/CRS84h"
+            }
+          },
+          "links": [
+            {
+              "title": "Western Sydney City Deal - 3D Buildings",
+              "href": "https://3d.hypotheticalhorse.com/collections/Buildings/WesternSydneyBuildings/",
+              "rel": "self",
+              "type": "application/json"
+            }
+          ],
+          "content": [
+            {
+              "title": "3D Tiles",
+              "href": "https://nsw.digitaltwin.terria.io/api/v0/data/485be627-677f-47bb-be13-decb3d58168b/Buildings3D/tileset.json",
+              "rel": "original",
+              "type": "application/json+3dtiles"
+            }
+          ],
+          "children": []
+        }
+      ]
     },
     {
       "id": "WaratahStation",
