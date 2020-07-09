@@ -70,7 +70,7 @@
     "semver": "^5.0.0",
     "style-loader": "^0.23.1",
     "svg-sprite-loader": "4.1.3",
-    "terriajs": "TerriaJS/terriajs#ogc3d",
+    "terriajs": "kring/terriajs#ogc3d",
     "terriajs-catalog-editor": "^0.2.0",
     "terriajs-cesium": "1.69.0-ogc3d",
     "terriajs-schema": "latest",
